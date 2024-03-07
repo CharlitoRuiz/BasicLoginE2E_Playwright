@@ -1,4 +1,10 @@
 {
   "username":"tomsmith",
-  "password": "SuperSecretPassword!"
+  "password": "SuperSecretPassword!",
+
+  "messages":{
+    "alertLogin": "You logged into a secure area!",
+    "description":"Welcome to the Secure Area. When you are done click logout below.",
+    "alertLogout": "You logged out of the secure area!"
+  }
 }

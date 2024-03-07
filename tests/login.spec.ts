@@ -13,12 +13,12 @@ test('Successfully login', async ({ page }) => {
   const loginpage = new LoginPage(page);
   await loginpage.enterCredentials(username, password)
   await loginpage.clickLoginButton();
-  await expect(loginpage.txtAlert).toContainText('You logged into a secure area! ×');
+  await expect(loginpage.txtAlert).toContainText(data.messages.alertLogin);
   await expect(loginpage.btnLogout).toBeVisible();
   await expect(loginpage.txtAlert).toBeVisible();
-  await expect(loginpage.txtDescription).toContainText('Welcome to the Secure Area. When you are done click logout below.');
+  await expect(loginpage.txtDescription).toContainText(data.messages.description);
   await loginpage.clickLogoutButton();
   await expect(loginpage.txtAlert).toBeVisible();
-  await expect(loginpage.txtAlert).toContainText('You logged out of the secure area! ×');
+  await expect(loginpage.txtAlert).toContainText(data.messages.alertLogout);
 
 });
